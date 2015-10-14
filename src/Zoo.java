@@ -11,6 +11,9 @@ public class Zoo {
         Animal animal = createAnimal(animalNAme);
         System.out.println(String.format("Created %s!", animal));
 
+        //for (InventoryItem item : iventory){
+        // systemout.printLn (....... + item.category}
+        }
     }
     static Animal createAnimal(String animalName){
         if(animalName.equals("Snake")){
