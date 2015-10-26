@@ -14,19 +14,30 @@ public class Zoo {
         //for (InventoryItem item : iventory){
         // systemout.printLn (....... + item.category}
         }
-    }
     static Animal createAnimal(String animalName){
-        if(animalName.equals("Snake")){
-            return new Snake();
+        Animal animal;
+        switch(animalName){
+            case "Snake":
+                animal = new Snake();
+                break;
+            case "Lion":
+                animal = new Lion();
+                break;
+            case "Condor":
+                animal = new Condor();
+                break;
+            case "alligator":
+                animal = new Reptile(){//annomous class
+                    @Override
+                    public String toString(){
+                        return "Alligator";
+                    }
+                };
+                break;
+            default :
+                animal = new Animal();
         }
-        else if (animalName.equals("Lion")){
-            return new Lion();
-        }
-        else if (animalName.equals("Condor")){
-            return new Condor();
-        }
-        else{
-            return new Animal();
-        }
+        return animal;
+
     }
 }
